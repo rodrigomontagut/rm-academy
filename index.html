@@ -834,6 +834,56 @@ button, input { font-family: inherit; border: none; cursor: pointer; -webkit-app
   font-weight: 700;
 }
 
+/* SIMULADOR DE CASOS */
+.sim-client { background: linear-gradient(180deg,rgba(20,34,57,.95) 0%,rgba(15,26,46,.95) 100%); border: 1px solid rgba(255,255,255,.06); border-radius: 16px; padding: 18px; margin-bottom: 14px; }
+.sim-top { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.sim-avatar { width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg,#2E5BFF,#4A90E2); display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 800; color: #fff; flex-shrink: 0; }
+.sim-name { font-size: 16px; font-weight: 700; color: #fff; }
+.sim-sub { font-size: 12px; color: #A8B2C7; margin-top: 2px; }
+.sim-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.sim-fact { background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.06); border-radius: 10px; padding: 10px 12px; }
+.sim-fact-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: #6B7891; margin-bottom: 4px; }
+.sim-fact-val { font-size: 13px; color: #fff; font-weight: 500; }
+.sim-fact-val.warn { color: #FFB547; }
+.sim-fact-val.ok { color: #00D68F; }
+.sim-fact-val.danger { color: #FF5C7C; }
+.sim-challenge { background: rgba(255,181,71,.08); border: 1px solid rgba(255,181,71,.2); border-radius: 11px; padding: 12px 14px; margin-bottom: 14px; }
+.sim-challenge-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: #FFB547; margin-bottom: 5px; }
+.sim-challenge-text { font-size: 13px; color: #FFE8C2; line-height: 1.6; }
+.sim-opts { display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; }
+.sim-opt { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08); border-radius: 11px; padding: 13px 15px; text-align: left; font-size: 13px; color: #fff; display: flex; align-items: center; gap: 10px; transition: all .2s; min-height: 50px; width: 100%; }
+.sim-opt:active:not(:disabled) { background: rgba(46,91,255,.1); }
+.sim-opt.correct { background: rgba(0,214,143,.15); border-color: #00D68F; color: #00D68F; }
+.sim-opt.wrong { background: rgba(255,92,124,.15); border-color: #FF5C7C; color: #FF5C7C; }
+.sim-feedback { background: linear-gradient(180deg,rgba(20,34,57,.95) 0%,rgba(15,26,46,.95) 100%); border: 1px solid rgba(255,255,255,.06); border-radius: 14px; padding: 16px; margin-bottom: 12px; }
+.sim-feedback-title { font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+.sim-why { font-size: 13px; color: #A8B2C7; line-height: 1.65; margin-bottom: 12px; }
+.sim-script { background: rgba(46,91,255,.1); border: 1px solid rgba(46,91,255,.2); border-radius: 10px; padding: 12px 14px; }
+.sim-script-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: #4A90E2; margin-bottom: 6px; }
+.sim-script-text { font-size: 12.5px; color: #D0E2F5; line-height: 1.7; font-style: italic; }
+.sim-score { display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.06); border-radius: 11px; padding: 11px 14px; margin-bottom: 14px; font-size: 13px; color: #A8B2C7; }
+.sim-score-val { font-size: 18px; font-weight: 800; color: #fff; margin-left: auto; }
+.sim-next { width: 100%; padding: 14px; border-radius: 11px; background: linear-gradient(135deg,#2E5BFF,#4A90E2); color: #fff; font-size: 14px; font-weight: 700; min-height: 50px; box-shadow: 0 4px 14px rgba(46,91,255,.25); }
+/* OBJECTION CRUSHER */
+.obj-cat-row { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 18px; }
+.obj-cat-btn { padding: 6px 13px; border-radius: 99px; font-size: 11px; font-weight: 700; border: 1px solid rgba(255,255,255,.08); background: rgba(255,255,255,.03); color: #A8B2C7; transition: all .2s; white-space: nowrap; }
+.obj-cat-btn.active { background: rgba(46,91,255,.15); border-color: #2E5BFF; color: #fff; }
+.obj-card { background: linear-gradient(180deg,rgba(20,34,57,.95) 0%,rgba(15,26,46,.95) 100%); border: 1px solid rgba(255,255,255,.06); border-radius: 14px; overflow: hidden; margin-bottom: 10px; }
+.obj-header { padding: 15px 16px; display: flex; align-items: center; gap: 10px; cursor: pointer; min-height: 60px; transition: background .2s; }
+.obj-header:active { background: rgba(46,91,255,.06); }
+.obj-objection { font-size: 14px; font-weight: 600; color: #fff; flex: 1; line-height: 1.3; }
+.obj-arrow { color: #6B7891; font-size: 14px; transition: transform .25s; flex-shrink: 0; }
+.obj-card.open .obj-arrow { transform: rotate(180deg); color: #4A90E2; }
+.obj-body { display: none; padding: 0 16px 16px; border-top: 1px solid rgba(255,255,255,.05); background: rgba(255,255,255,.015); }
+.obj-card.open .obj-body { display: block; }
+.obj-step { margin-top: 14px; }
+.obj-step-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: #4A90E2; margin-bottom: 7px; }
+.obj-text { font-size: 13px; color: #A8B2C7; line-height: 1.7; }
+.obj-nepq { background: rgba(46,91,255,.1); border: 1px solid rgba(46,91,255,.2); border-radius: 10px; padding: 12px 14px; margin-top: 10px; }
+.obj-nepq-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: #4A90E2; margin-bottom: 6px; }
+.obj-nepq-text { font-size: 13px; color: #D0E2F5; line-height: 1.7; font-style: italic; }
+
+
 /* ══════════════════════════════════════
    AI COACH PANEL
 ══════════════════════════════════════ */
@@ -2712,6 +2762,33 @@ button, input { font-family: inherit; border: none; cursor: pointer; -webkit-app
 
 </main>
 
+
+<!-- PANEL: SIMULADOR DE CASOS -->
+<section id="panel-sim" class="panel">
+  <h1 class="sec-title">Simulador de Casos</h1>
+  <p class="sec-sub">Lee el perfil del cliente y elige el carrier correcto · Metodo Montagut</p>
+  <div class="sim-score">
+    <span>🏆 Puntaje</span>
+    <span class="sim-score-val" id="simScore">0 / 0</span>
+  </div>
+  <div id="simArea"></div>
+</section>
+
+<!-- PANEL: OBJECTION CRUSHER -->
+<section id="panel-obj" class="panel">
+  <h1 class="sec-title">Objection Crusher</h1>
+  <p class="sec-sub">Respuestas NEPQ listas para cada objecion · Metodo Montagut</p>
+  <div class="obj-cat-row">
+    <button class="obj-cat-btn active" onclick="objFilter(this,'all')">Todas</button>
+    <button class="obj-cat-btn" onclick="objFilter(this,'precio')">Precio</button>
+    <button class="obj-cat-btn" onclick="objFilter(this,'pensar')">Lo pienso</button>
+    <button class="obj-cat-btn" onclick="objFilter(this,'trabajo')">Ya tengo</button>
+    <button class="obj-cat-btn" onclick="objFilter(this,'esposo')">Esposo/a</button>
+    <button class="obj-cat-btn" onclick="objFilter(this,'itin')">ITIN</button>
+  </div>
+  <div id="objList"></div>
+</section>
+
 <!-- ════════════════ PANEL: AI COACH ════════════════ -->
 <section id="panel-ai" class="panel">
   <div class="ai-topic-bar">
@@ -2773,6 +2850,8 @@ button, input { font-family: inherit; border: none; cursor: pointer; -webkit-app
   <button class="nav-btn" onclick="showPanel('gui',this)"><span class="nav-icon">🎙️</span><span class="nav-label">Guiones</span></button>
   <button class="nav-btn" onclick="showPanel('fc',this);initFlashcards()"><span class="nav-icon">🃏</span><span class="nav-label">Cards</span></button>
   <button class="nav-btn" onclick="showPanel('qz',this);initQuiz()"><span class="nav-icon">🎯</span><span class="nav-label">Quiz</span></button>
+  <button class="nav-btn" onclick="showPanel('sim',this);initSim()"><span class="nav-icon">🏆</span><span class="nav-label">Casos</span></button>
+  <button class="nav-btn" onclick="showPanel('obj',this)"><span class="nav-icon">🛡️</span><span class="nav-label">Objeciones</span></button>
   <button class="nav-btn" onclick="showPanelAI(this)"><span class="nav-icon">🤖</span><span class="nav-label">AI Coach</span></button>
 </nav>
 
@@ -3172,7 +3251,283 @@ function answerQ(i) {
 }
 function nextQ() { qIdx++; renderQ(); }
 
+
+/* ═══ SIMULADOR DE CASOS ═══ */
+const SIM_CASES = [
+  {
+    initials:"MR", name:"Maria Rodriguez", age:38,
+    status:"ITIN - sin SSN", budget:"$120/mes",
+    health:"Diabetes T2 controlada con pastilla", smoker:false,
+    challenge:"Tiene ITIN y diabetes T2 con pastilla. Quiere seguro de vida permanente con Living Benefits.",
+    options:["NLG FlexLife IUL","Corebridge Max Accumulator+","Transamerica FFIUL II","F&G Pathsetter IUL"],
+    correct:0,
+    why:"NLG es el UNICO carrier que acepta ITIN para todos sus productos. Ademas, en Express NT1 aprueba diabetes T2 con pastilla e INCLUYE Living Benefits completos con Alzheimer's incluido.",
+    script:"Maria, tengo una excelente noticia. Este producto te acepta con tu ITIN y con tu diabetes controlada. Ademas, si en algun momento te diagnostican algo serio — cancer, infarto, Alzheimer's — puedes usar el beneficio en vida. Vamos a solicitar tu cotizacion hoy."
+  },
+  {
+    initials:"JC", name:"Jose Cardenas", age:55,
+    status:"Ciudadano USA", budget:"$200/mes",
+    health:"Sano — no fuma, BMI normal", smoker:false,
+    challenge:"Quiere IUL para retiro tax-free. Prioridad: maxima acumulacion y flexibilidad de indices.",
+    options:["NLG FlexLife IUL","Corebridge QoL Flex Term","F&G Pathsetter IUL","Assurity Term ROP"],
+    correct:2,
+    why:"F&G Pathsetter es ideal para acumulacion retiro tax-free. Tiene 5 indices (S&P cap 12%, Barclays 180% PR), floor 0.25% y Persistency Bonus a partir del ano 11. Para un cliente sano de 55 anos enfocado en retiro, es la mejor opcion.",
+    script:"Jose, tu 401k es bueno pero cuando te retires vas a pagar impuestos sobre cada dolar. Con Pathsetter de F&G el dinero crece vinculado al mercado pero nunca pierde, y lo sacas en retiro sin impuestos. Vamos a correr los numeros."
+  },
+  {
+    initials:"AL", name:"Ana Lozano", age:42,
+    status:"Green Card", budget:"$90/mes",
+    health:"Declinada antes — insulina + historial cardiaco", smoker:false,
+    challenge:"Fue rechazada por NLG y Corebridge. Necesita algo que la acepte sin importar su condicion.",
+    options:["NLG TotalSecure WL","Transamerica FE Immediate","Assurity WL","Corebridge QoL Flex Term"],
+    correct:1,
+    why:"Transamerica FE Immediate Solution es WL GARANTIZADO para CUALQUIER estado de salud — sin examen, sin preguntas, hasta $50,000. Para alguien declinada por otras companias, esta es la unica solucion inmediata.",
+    script:"Ana, que otras companias te hayan dicho no no significa que no puedes tener seguro. Transamerica tiene un producto especial — sin examen, sin preguntas. Desde el primer dia tienes cobertura para tu familia."
+  },
+  {
+    initials:"RP", name:"Roberto Perez", age:47,
+    status:"Ciudadano USA", budget:"$150/mes",
+    health:"Sano, no fuma", smoker:false,
+    challenge:"Quiere termino con Living Benefits GARANTIZADOS en TODA aprobacion. No quiere sorpresas.",
+    options:["NLG Term Life","Corebridge QoL Flex Term","Transamerica Trendsetter Super","F&G Everlast IUL"],
+    correct:1,
+    why:"Corebridge da Living Benefits en el 100% de sus aprobaciones sin excepcion — aprueba todo o declina todo. Para un cliente que quiere certeza absoluta de LBs, Corebridge QoL Flex Term es la respuesta.",
+    script:"Roberto, con Corebridge la garantia es absoluta: si te aprueban — que con tu perfil es casi seguro — los Living Benefits estan incluidos. No es condicional. Es siempre. Vamos a solicitarlo hoy."
+  },
+  {
+    initials:"DM", name:"Diana Morales", age:33,
+    status:"ITIN — 2 anos en USA", budget:"$60/mes",
+    health:"Sana, sin condiciones", smoker:false,
+    challenge:"Quiere Critical Illness si la diagnostican con cancer. Tiene ITIN con 2 anos en USA.",
+    options:["NLG FlexLife IUL","Assurity Critical Illness","Corebridge Max Accumulator+","Transamerica FE Immediate"],
+    correct:1,
+    why:"Assurity acepta ITIN con 1+ ano en USA para Critical Illness. Paga $5K-$75K lump-sum directo al cliente ante diagnostico de cancer, infarto, derrame u otras condiciones. Es exactamente lo que Diana necesita a bajo costo.",
+    script:"Diana, si manana te diagnostican cancer, este producto te deposita el dinero DIRECTO en tu cuenta en dias. Sin deducibles, sin tramites. Es tu dinero para lo que necesites — el tratamiento, la renta, lo que sea."
+  },
+  {
+    initials:"CM", name:"Carlos Mendez", age:50,
+    status:"Ciudadano USA", budget:"$300/mes",
+    health:"Sano, ejecutivo, dueño de empresa", smoker:false,
+    challenge:"Quiere IUL de proteccion maxima con $500K+, legado familiar. Prefiere sin examen si es posible.",
+    options:["NLG FlexLife IUL","F&G Everlast IUL","Assurity WL","Transamerica Trendsetter Super"],
+    correct:1,
+    why:"F&G Everlast IUL es ideal para proteccion/legado: desde $100K-$150K, 8 indices con BlackRock y Morgan Stanley, y para 18-60 anos hasta $500K NO solicita APS ni Telephone Interview. Acelera enormemente el proceso.",
+    script:"Carlos, el Everlast de F&G es el producto de proteccion mas completo que tengo. 8 indices premium, Living Benefits incluidos, y para tu perfil pueden aprobarte hasta $500K sin examen medico en la misma semana."
+  }
+];
+
+let simCurrent = 0, simScore = 0, simTotal = 0, simAnswered = false;
+const simShuffled = [...SIM_CASES].sort(() => Math.random() - 0.5);
+
+function initSim() {
+  simCurrent = 0; simScore = 0; simTotal = 0; simAnswered = false;
+  document.getElementById('simScore').textContent = '0 / 0';
+  renderSim(0);
+}
+
+function renderSim(idx) {
+  simAnswered = false;
+  const c = simShuffled[idx % simShuffled.length];
+  const area = document.getElementById('simArea');
+  area.innerHTML = `
+    <div class="sim-client">
+      <div class="sim-top">
+        <div class="sim-avatar">${c.initials}</div>
+        <div>
+          <div class="sim-name">${c.name}</div>
+          <div class="sim-sub">${c.age} años · ${c.budget}</div>
+        </div>
+      </div>
+      <div class="sim-facts">
+        <div class="sim-fact">
+          <div class="sim-fact-label">Estatus</div>
+          <div class="sim-fact-val ${c.status.includes('ITIN') ? 'warn' : 'ok'}">${c.status}</div>
+        </div>
+        <div class="sim-fact">
+          <div class="sim-fact-label">Fumador</div>
+          <div class="sim-fact-val ${c.smoker ? 'danger' : 'ok'}">${c.smoker ? 'Sí' : 'No'}</div>
+        </div>
+        <div class="sim-fact" style="grid-column:1/-1">
+          <div class="sim-fact-label">Salud</div>
+          <div class="sim-fact-val">${c.health}</div>
+        </div>
+      </div>
+    </div>
+    <div class="sim-challenge">
+      <div class="sim-challenge-label">Situación del cliente</div>
+      <div class="sim-challenge-text">${c.challenge}</div>
+    </div>
+    <p style="font-size:13px;color:#A8B2C7;font-weight:600;margin-bottom:10px">¿Qué carrier recomiendas?</p>
+    <div class="sim-opts">
+      ${c.options.map((o,i) => `<button class="sim-opt" onclick="simChoose(${i})" id="simOpt${i}">▸ ${o}</button>`).join('')}
+    </div>
+    <div id="simFeedback"></div>
+  `;
+}
+
+function simChoose(idx) {
+  if (simAnswered) return;
+  simAnswered = true;
+  simTotal++;
+  const c = simShuffled[simCurrent % simShuffled.length];
+  const correct = c.correct === idx;
+  if (correct) simScore++;
+  document.getElementById('simScore').textContent = simScore + ' / ' + simTotal;
+  document.querySelectorAll('.sim-opt').forEach((btn, i) => {
+    btn.disabled = true;
+    if (i === c.correct) btn.classList.add('correct');
+    else if (i === idx && !correct) btn.classList.add('wrong');
+  });
+  const fb = document.getElementById('simFeedback');
+  fb.innerHTML = `
+    <div class="sim-feedback">
+      <div class="sim-feedback-title">${correct ? '✅ Correcto!' : '❌ No exactamente'}</div>
+      <div class="sim-why">${c.why}</div>
+      <div class="sim-script">
+        <div class="sim-script-label">Script para este caso</div>
+        <div class="sim-script-text">"${c.script}"</div>
+      </div>
+    </div>
+    <button class="sim-next" onclick="simNext()">Siguiente caso →</button>
+  `;
+  window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});
+}
+
+function simNext() {
+  simCurrent++;
+  renderSim(simCurrent);
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+/* ═══ OBJECTION CRUSHER ═══ */
+const OBJECTIONS = [
+  {
+    cat: 'precio',
+    emoji: '💰',
+    obj: '"Está muy caro"',
+    why: 'El cliente no ha conectado el precio con el valor. El problema no es el dinero — es que no ve por qué vale lo que cuesta.',
+    nepq: '"Entiendo que el precio importa. Pero dejame preguntarte algo — si hoy te diagnostican cancer o tienes un infarto, ¿cuanto te va a costar NO tener este seguro? Los gastos fuera de bolsa en USA promedian $20,000+ solo en deducibles. ¿Cuanto te parece razonable para proteger eso?"',
+    tip: 'Nunca justifiques el precio — compara el costo del seguro contra el costo de NO tenerlo.'
+  },
+  {
+    cat: 'pensar',
+    emoji: '🤔',
+    obj: '"Lo tengo que pensar"',
+    why: 'Generalmente significa que hay una duda sin resolver o no vio suficiente valor. Rara vez es genuinamente tiempo para pensar.',
+    nepq: '"Claro, lo entiendo completamente. Pero ayudame a entender — de lo que conversamos hoy, ¿que parte sientes que te falta aclarar para poder tomar una decision? Quiero asegurarme de que tienes toda la informacion que necesitas."',
+    tip: 'Nunca digas "te llamo despues". Profundiza la objecion real en el momento.'
+  },
+  {
+    cat: 'trabajo',
+    emoji: '🏢',
+    obj: '"Mi trabajo ya me da seguro"',
+    why: 'El seguro del empleador promedio es 1-1.5x el salario anual. Insuficiente para la mayoria de familias, y desaparece si pierden el trabajo.',
+    nepq: '"Que bueno que tienes esa cobertura. Pero dejame preguntarte — si mañana cambias de trabajo o te despiden, ¿que pasa con ese seguro? Y el seguro de tu empresa, ¿cubre lo suficiente para que tu familia mantenga el mismo estilo de vida por 20 años?"',
+    tip: 'El seguro de trabajo es temporal y limitado. El tuyo es permanente y personal.'
+  },
+  {
+    cat: 'esposo',
+    emoji: '👫',
+    obj: '"Tengo que hablar con mi esposo/a"',
+    why: 'Puede ser genuino o puede ser una salida. Si es genuino, hay que involucrar al conyuge. Si es salida, hay que encontrar la objecion real.',
+    nepq: '"Perfecto, me parece bien. De hecho, esta decision afecta a los dos por igual. ¿Cuando seria un buen momento para que los tres nos reunamos — en persona o por videollamada? Asi le explico todo directamente y pueden decidir juntos."',
+    tip: 'Propón la reunion con los dos en lugar de esperar a que ellos conversen solos.'
+  },
+  {
+    cat: 'esposo',
+    emoji: '👫',
+    obj: '"Ahora no es buen momento, estoy ocupado"',
+    why: 'El cliente no ha visto urgencia real. Falta conectar con el riesgo de esperar.',
+    nepq: '"Entiendo que estas ocupado, y respeto tu tiempo. Solo quiero preguntarte — si algo te pasara esta semana, ¿tu familia estaria protegida con lo que tienen hoy? El mejor momento para asegurar es cuando todavia puedes calificar."',
+    tip: 'La urgencia no es presion — es la realidad de que la salud puede cambiar manana.'
+  },
+  {
+    cat: 'precio',
+    emoji: '💰',
+    obj: '"Voy a esperar a tener mas dinero"',
+    why: 'Esperando, la prima sube con la edad y el riesgo de un problema de salud que haga perder la calificacion aumenta cada año.',
+    nepq: '"Lo entiendo. Pero dejame mostrarte algo — a tus 35 años hoy, tu prima es X. A los 40 va a ser un 40% mas alta. Y si en ese tiempo desarrollas presion alta o colesterol, podria subir aun mas o ser declinado. ¿Cuanto te ahorrarias asegurandote hoy?"',
+    tip: 'Muestra la diferencia de prima en dolares reales entre hoy y en 5 años.'
+  },
+  {
+    cat: 'itin',
+    emoji: '📋',
+    obj: '"No tengo numero de seguro social"',
+    why: 'Muchos agentes pierden esta venta porque no conocen que NLG acepta ITIN. Es la objecion mas facil de resolver si sabes el producto.',
+    nepq: '"Eso no es un problema. Tengo acceso a la unica compañia en Estados Unidos que acepta ITIN — o cualquier forma de identificacion — para todos sus productos de seguro de vida. Tu familia merece proteccion independientemente de tu estatus migratorio."',
+    tip: 'NLG es el UNICO carrier que acepta ITIN. Convierte esta objecion en tu ventaja competitiva.'
+  },
+  {
+    cat: 'itin',
+    emoji: '📋',
+    obj: '"Tengo miedo de que me pregunten sobre mi estatus migratorio"',
+    why: 'El cliente tiene miedo real. No lo minimices — valida y redirige a los hechos.',
+    nepq: '"Entiendo completamente ese miedo y lo respeto. Pero quiero que sepas algo importante: las companias de seguros de vida NO reportan informacion a migracion. Su negocio es proteger familias, no verificar estatus. Y NLG acepta ITIN — eso es todo lo que necesitas."',
+    tip: 'Nunca hagas promesas legales. Di los hechos: las aseguradoras no comparten datos con ICE.'
+  },
+  {
+    cat: 'trabajo',
+    emoji: '🏢',
+    obj: '"Ya tengo seguro de vida de otra compañia"',
+    why: 'El cliente puede tener un producto sin Living Benefits, obsoleto o insuficiente. Tu trabajo es descubrir que tiene.',
+    nepq: '"Que bueno que ya tienes proteccion. ¿Me puedes contar un poco sobre que tipo de poliza tienes? Especificamente, ¿incluye los Living Benefits — el beneficio que te permite usar el dinero si te diagnostican algo grave en vida?"',
+    tip: 'La mayoria de polizas antiguas no tienen Living Benefits. Eso es tu apertura.'
+  },
+  {
+    cat: 'pensar',
+    emoji: '🤔',
+    obj: '"No creo que lo necesite ahora"',
+    why: 'El cliente no ha visualizado el riesgo real. Necesita una historia o estadistica que lo conecte emocionalmente.',
+    nepq: '"Entiendo esa sensacion. ¿Puedo preguntarte algo personal? ¿Conoces a alguien — familiar o amigo — que haya tenido cancer, un infarto o un derrame en los ultimos 5 años? [espera respuesta] La mayoria de personas que dicen que no lo necesitan son personas saludables... exactamente como esas personas antes de su diagnostico."',
+    tip: 'Las historias reales venden mas que las estadisticas. Usa casos de tu comunidad.'
+  }
+];
+
+let objCurrentCat = 'all';
+
+function renderObjections(cat) {
+  const filtered = cat === 'all' ? OBJECTIONS : OBJECTIONS.filter(o => o.cat === cat);
+  const list = document.getElementById('objList');
+  if (!list) return;
+  list.innerHTML = filtered.map((o, i) => `
+    <div class="obj-card" id="objCard${i}">
+      <div class="obj-header" onclick="toggleObj('objCard${i}')">
+        <span style="font-size:20px">${o.emoji}</span>
+        <span class="obj-objection">${o.obj}</span>
+        <span class="obj-arrow">▼</span>
+      </div>
+      <div class="obj-body">
+        <div class="obj-step">
+          <div class="obj-step-label">Por que dice esto</div>
+          <div class="obj-text">${o.why}</div>
+        </div>
+        <div class="obj-nepq">
+          <div class="obj-nepq-label">Respuesta NEPQ</div>
+          <div class="obj-nepq-text">${o.nepq}</div>
+        </div>
+        <div class="obj-step">
+          <div class="obj-step-label">Tip tactico</div>
+          <div class="obj-text">${o.tip}</div>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function objFilter(btn, cat) {
+  document.querySelectorAll('.obj-cat-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  objCurrentCat = cat;
+  renderObjections(cat);
+}
+
+function toggleObj(id) {
+  document.getElementById(id).classList.toggle('open');
+}
+
+
 initDecision();
+renderObjections("all");
 </script>
 </body>
 </html>
